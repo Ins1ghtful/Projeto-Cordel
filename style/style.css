@@ -3,46 +3,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+:root{
+    --fonte-geral: 'Sriracha', cursive;
+    --fonte-titulo: 'Passion One', cursive;
+    --fonte-reserva: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 header {
-    position: relative;
     background-color: black;
     text-align: center;
-    height: 250px;
-    margin-bottom:60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     box-shadow: -2px 7px 10px rgba(0, 0, 0, 0.418);
 }
 
-header .texto-centralizado{
-    position: absolute;
-    width: 900px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-
-header a{
+a{
     text-decoration: none;
     font-weight: bold;
     color: white;
 }
-header a:hover{
+a:hover{
     text-decoration: underline;
 }
 
 #titulo{
     color: white;
-    font-family: 'Passion One', cursive;
-    text-transform: capitalize;
-    font-weight: bolder;
-    font-size: 6.2em;
-}
-
-#titulo::first-letter{
-    font-size: 1.3em;
+    font-family: var(--fonte-titulo),var(--fonte-reserva);
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 7vw;
 }
 
 #texto_cabecalho{
@@ -51,41 +44,50 @@ header a:hover{
     font-family: 'Verdana',sans-serif;
 }
 
-section p{
-    font-family: 'Sriracha', cursive;
-    width: 600px;
-    font-size: 3em;
-    line-height: 95px;
-    margin-left: 30px;
+section .normal{
+    font-family: var(--fonte-geral),var(--fonte-reserva);
+    font-size: 3.5vw;
+    line-height: 2em;
+    padding-left: 30px;
 }
+
+section.normal p{
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+}
+
 
 #fundo1{
     background-image: url('../imagens/background001.jpg');
-    background-position: center center;
     background-size: cover;
+    background-position: right center;
     background-attachment: fixed;
-    margin: 150px 0;
     padding: 60px 30px;
-    color: #002300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.589);
 }
 
 #fundo2{
     background-image: url('../imagens/background002.jpg');
-    background-position: center center;
+    background-position: right center;
     background-size: cover;
     background-attachment: fixed;
-    margin: 150px 0;
+    box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.349);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.589);
     padding: 60px 30px;
-    color: #ffffff;
 }
 
-section .texto-dentro-imagem{
+section#fundo1 p{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.582);
+    color: white;
+    padding: 10px;
+}
+
+section#fundo2 p{
+    display: inline-block;  
     background-color: rgba(0, 0, 0, 0.452);
     color: white;
-    max-width: 558px;
-    margin: 0px;
-    padding: 5px;
-
+    padding: 10px;
 }
 
 footer{
@@ -93,5 +95,6 @@ footer{
     color: white;
     font-family: 'Verdana',cursive;
     text-align: center;
-    padding: 30px;
+    padding: 10px;
+    margin: 120px 0 0 0;
 }
